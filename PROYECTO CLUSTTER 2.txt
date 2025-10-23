@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLUSTER – Ingeniería y Seguridad</title>
+
+<style>
+  /* 🧠 ESTILO GLOBAL */
+  body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #030b18;
+    color: #eaf6ff;
+    overflow-x: hidden;
+  }
+
+  /* Fondo animado tipo microchip */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: repeating-linear-gradient(
+      90deg, rgba(51,204,255,0.1) 0 1px, transparent 1px 100px
+    ), repeating-linear-gradient(
+      0deg, rgba(162,102,255,0.05) 0 1px, transparent 1px 100px
+    );
+    background-size: 100px 100px;
+    animation: gridmove 20s linear infinite;
+    z-index: 0;
+  }
+
+  @keyframes gridmove {
+    from {background-position: 0 0, 0 0;}
+    to {background-position: 100px 100px, -100px -100px;}
+  }
+
+  section {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 100px 20px;
+  }
+
+  h1, h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: #33ccff;
+    text-shadow: 0 0 20px #33ccff;
+  }
+
+  h2 {
+    color: #a266ff;
+    font-size: 1.8rem;
+  }
+
+  p {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+    font-size: 1.1rem;
+  }
+
+  /* Botones flotantes */
+  .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #33ccff, #a266ff);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(51,204,255,0.6);
+  }
+
+  .btn:hover {
+    box-shadow: 0 0 25px rgba(162,102,255,0.8);
+    transform: scale(1.05);
+  }
+
+  /* Tarjetas de servicios */
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(51,204,255,0.2);
+    border-radius: 20px;
+    padding: 30px;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 20px rgba(51,204,255,0.1);
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    border-color: #33ccff;
+    box-shadow: 0 0 25px rgba(51,204,255,0.5);
+  }
+
+  .card h3 {
+    color: #33ccff;
+    margin-bottom: 10px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 50px 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+    color: #88aaff;
+  }
+
+  /* Efecto de “código binario cayendo” */
+  .binary {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: rgba(51,204,255,0.08);
+    font-size: 14px;
+    line-height: 18px;
+    font-family: monospace;
+    white-space: pre;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+    animation: flicker 3s infinite;
+  }
+
+  @keyframes flicker {
+    0%, 100% {opacity: 0.1;}
+    50% {opacity: 0.2;}
+  }
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="binary">0101010011010101010100101101010010100101010</div>
+
+<!-- INTRO -->
+<section>
+  <h1>Cluster – Ingeniería y Seguridad</h1>
+  <h2>Innovación y tecnología para la protección inteligente</h2>
+  <p>Combinamos ingeniería avanzada, automatización y diseño para proteger lo esencial.  
+  Desde la detección temprana hasta la supresión automatizada, cada sistema está diseñado con precisión y visión tecnológica.</p>
+  <a href="#servicios" class="btn">Explorar Servicios</a>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <h2>Nuestros Servicios</h2>
+  <div class="services">
+    <div class="card">
+      <h3>🧯 Sistemas de Supresión</h3>
+      <p>Diseño e instalación de sistemas automáticos con agentes limpios, gases inertes y soluciones inteligentes.</p>
+    </div>
+    <div class="card">
+      <h3>💡 Detección Avanzada</h3>
+      <p>Sensores inteligentes, control en tiempo real y respuesta inmediata ante amenazas críticas.</p>
+    </div>
+    <div class="card">
+      <h3>🧠 Ingeniería y Asesoría</h3>
+      <p>Proyectos, estudios y asesorías bajo normativas NFPA e internacionales.</p>
+    </div>
+    <div class="card">
+      <h3>🔧 Mantención y Soporte</h3>
+      <p>Revisión, carga, calibración y mantenimiento preventivo de sistemas y equipos.</p>
+    </div>
+    <div class="card">
+      <h3>⚙ Automatización y Monitoreo</h3>
+      <p>Supervisión remota y control inteligente con conexión 24/7.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section>
+  <h2>¿Listo para llevar tu seguridad al siguiente nivel?</h2>
+  <a href="https://wa.me/XXXXXXXXXX" class="btn">WhatsApp Directo</a>
+  <a href="mailto:contacto@clusterseguridad.cl" class="btn">Enviar Correo</a>
+  <a href="#" class="btn">Descargar Catálogo</a>
+</section>
+
+<footer>
+  © 2025 Cluster Ingeniería y Seguridad<br>
+  Innovación y tecnología para la protección inteligente.
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
